@@ -2,7 +2,7 @@
    Link this file on EVERY page, after style.css. */
 @media (max-width: 768px){
   html,body{overflow-x:hidden;max-width:100%}
-  header.top{height:auto !important;max-height:none !important;overflow:visible !important;padding-bottom:14px !important;border:0 !important;border-bottom:0 !important;box-shadow:none !important}
+  header.top{position:static !important;height:auto !important;max-height:none !important;overflow:visible !important;padding-bottom:14px !important;border:0 !important;border-bottom:0 !important;box-shadow:none !important}
   header.top .wrap{height:auto !important;max-height:none !important;overflow:visible !important}
   header.top .wrap,header.top .topline,header.top .subtitle,header.top .tagline{border:0 !important;box-shadow:none !important}
   .top .brand{font-size:11vw !important;line-height:1.05 !important;color:#000 !important;letter-spacing:.2px}
