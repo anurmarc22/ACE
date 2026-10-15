@@ -1,0 +1,99 @@
+*{box-sizing:border-box}
+:root{--ink:#2b2b2b;--soft:#444;--grey:#bdbdbd;--black:#000;--panel:#1a1a1a}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.7 Raleway,system-ui,sans-serif;color:var(--ink);background:#fff}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+a{color:inherit}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+.top{background:#fff;padding:20px 0 0;position:sticky;top:0;z-index:20;box-shadow:0 1px 0 #ddd}
+.topline{display:flex;justify-content:space-between;align-items:center}
+.brand{font:400 26px 'Playfair Display',serif;text-decoration:none;color:#111;letter-spacing:.01em}
+.subtitle{font:400 16px 'Playfair Display',serif;color:var(--ink);margin:4px 0 8px}
+.tagline{font:italic 400 14px 'Bodoni Moda',serif;color:var(--soft);margin:0 0 12px;text-align:right}
+nav{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid #111;padding:12px 0}
+nav a{text-decoration:none;font-size:16px;color:#111;padding-bottom:2px;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current]{border-color:#111}
+.burger{display:none;background:none;border:1px solid #bbb;border-radius:4px;font-size:22px;padding:0 10px;color:#111}
+@media(max-width:860px){.burger{display:block}nav{display:none;flex-direction:column;gap:10px}nav.open{display:flex}.subtitle{display:none}.tagline{display:none}}
+/* hero */
+.hero{background-size:cover;background-position:center;color:#fff;text-align:center;min-height:clamp(420px,62vw,760px);display:flex;align-items:flex-end;padding-bottom:clamp(36px,6vw,64px)}
+.hero .wrap{width:100%}
+.hero h1{font:400 clamp(40px,8vw,104px)/1.05 'Playfair Display',serif;margin:.1em 0 .2em;letter-spacing:.02em;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.hero h1 span{display:block}
+.hero .sub{font:italic 400 clamp(18px,2.6vw,30px) 'Bodoni Moda',serif;margin:0;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+/* tiles */
+.tiles{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #333;background:#000}
+.tile{position:relative;display:flex;align-items:center;justify-content:center;min-height:420px;background-size:cover;background-position:center;color:#fff;text-decoration:none;text-align:center;overflow:hidden}
+.tile.wide{grid-column:1/-1;min-height:360px}
+.tile span{display:block;padding:20px}
+.tile b{display:block;font:400 clamp(24px,3.2vw,40px)/1.2 'Playfair Display',serif;letter-spacing:.08em;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.tile i{display:block;margin-top:8px;font:italic 400 clamp(16px,1.8vw,22px) 'Bodoni Moda',serif}
+.tile{transition:filter .3s}.tile:hover{filter:brightness(1.12)}
+@media(max-width:760px){.tiles{grid-template-columns:1fr}.tile{min-height:280px}}
+/* contact panel */
+.contactpanel{display:grid;grid-template-columns:1fr 1fr;background:var(--panel);color:#fff;min-height:560px}
+.cimg{background-size:cover;background-position:center;min-height:360px}
+.cform-wrap{padding:64px clamp(24px,6vw,90px)}
+.cform-wrap h2{font:400 clamp(34px,5vw,60px)/1.1 'Playfair Display',serif;margin:0 0 28px;letter-spacing:.01em}
+.cinfo{font-size:15px;color:#ddd}.cinfo a{color:#fff}
+.cform label{display:block;font-size:16px;margin-bottom:16px}
+.cform input,.cform textarea{display:block;width:100%;margin-top:4px;padding:10px 0;background:transparent;border:0;border-bottom:1px solid #fff;color:#fff;font:inherit;border-radius:0;outline:none}
+.cform input:focus,.cform textarea:focus{border-bottom-width:2px}
+.cform ::placeholder{color:#aaa}
+.btn{display:inline-block;background:#222;color:#fff;border:1px solid #222;padding:12px 30px;text-decoration:none;font:italic 400 17px 'Bodoni Moda',serif;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:#fff;color:#111}
+.btn-light{background:#fff;color:#111;border-color:#fff}.btn-light:hover{background:transparent;color:#fff}
+@media(max-width:820px){.contactpanel{grid-template-columns:1fr}.cimg{min-height:300px}}
+/* sub pages */
+.banner{background:#111;color:#fff;padding:34px 0}
+.banner h1{margin:0;font:400 clamp(24px,4vw,40px) 'Playfair Display',serif}
+.grey{background:var(--grey);padding:56px 0}
+.feature{display:grid;grid-template-columns:minmax(0,33%) 1fr;background:#fff;margin-bottom:56px;align-items:stretch}
+.feature img,.feature .leafph{width:100%;height:100%;object-fit:cover;min-height:380px}
+.ftext{padding:56px clamp(24px,6vw,96px)}
+h2.big,.ftext h2,.card2 h2{font:400 clamp(30px,4.4vw,58px)/1.15 'Playfair Display',serif;color:var(--soft);margin:0 0 28px}
+.card2{background:#fff;padding:60px clamp(24px,7vw,120px);margin-bottom:0}
+.card2 h2{font-size:clamp(26px,3.6vw,44px)}
+.body{font:italic 400 clamp(16px,1.5vw,19px)/2 'Bodoni Moda',serif;color:#111;max-width:760px;margin:0 0 18px}
+.leafph{background:radial-gradient(circle at 50% 40%,#f6e4e4 0,#cfe0f0 35%,#9db9dc 100%)}
+@media(max-width:820px){.feature{grid-template-columns:1fr}.feature img,.feature .leafph{min-height:260px;max-height:420px}.ftext{padding:32px 22px}}
+.contact-strip{padding:56px 0;text-align:center;background:#fff}
+.contact-strip h2{font:400 36px 'Playfair Display',serif;margin:0 0 6px}
+.cities{color:#666}
+/* services */
+.svcs{padding:64px 0}
+.svc{position:relative;margin-bottom:80px;display:grid;grid-template-columns:minmax(0,56%) 1fr}
+.svc img,.svc .leafph.sq{width:100%;aspect-ratio:1/1;object-fit:cover}
+.svccard{background:#fff;border:1px solid #bbb;padding:48px 44px;margin:72px 0 72px -22%;position:relative;align-self:center;min-height:380px}
+.svccard h2{font:400 clamp(26px,3vw,40px)/1.2 'Playfair Display',serif;margin:0 0 14px}
+.svccard hr{border:0;border-top:1px solid #999;margin:22px 0}
+.rm{font:italic 400 18px 'Bodoni Moda',serif}
+.price{font:italic 400 18px 'Bodoni Moda',serif}
+.svccard .btn{background:#777;border-color:#777}.svccard .btn:hover{background:#111;color:#fff}
+@media(max-width:820px){.svc{grid-template-columns:1fr}.svccard{margin:-40px 16px 0}}
+/* contact page */
+.cphead{text-align:center;padding:48px 20px 40px;background:#fff}
+.cphead h1{font:400 clamp(40px,6vw,72px)/1.1 'Playfair Display',serif;margin:0}
+.cphead p{font:italic 400 clamp(18px,2vw,26px) 'Bodoni Moda',serif;margin:10px 0 0}
+.cpage{display:grid;grid-template-columns:1fr 1fr;background:#f7f7f7}
+.cpimg{background-size:cover;background-position:center;min-height:520px}
+.cpform{padding:64px clamp(24px,6vw,100px)}
+.cities2{font:italic 400 22px 'Bodoni Moda',serif;text-align:center;margin:0}
+.mail{font:italic 400 20px 'Bodoni Moda',serif;text-align:center;color:#555;margin:4px 0 48px}
+.cpform form label{display:block;font-size:16px;margin-bottom:26px}
+.cpform input,.cpform textarea,.cpform select{display:block;width:100%;margin-top:6px;padding:8px 0;background:transparent;border:0;border-bottom:1px solid #111;font:inherit;color:#111;border-radius:0;outline:none}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cpform .btn{background:#111}.cpform .btn:hover{background:#fff;color:#111}
+.hours{margin-top:36px;font-size:14px;color:#555;text-align:center}
+@media(max-width:820px){.cpage{grid-template-columns:1fr}.cpimg{min-height:320px}}
+/* footer */
+footer{background:#fff;color:#888;padding:56px 0 40px;font-size:14px;text-align:center;border-top:1px solid #eee}
+footer a{color:inherit;text-decoration:none}footer a:hover{text-decoration:underline}
+.foot{display:flex;flex-direction:column;align-items:center}
+.foot .brand{display:block;font-size:clamp(28px,4vw,40px);color:var(--soft);margin-bottom:16px}
+.foot p{margin:.35em 0;color:#888}
+.foot .copy{margin-top:18px;font-size:12px;color:#aaa}
+/* reveal */
+.js-on .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.js-on .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js-on .rv{opacity:1;transform:none;transition:none}}

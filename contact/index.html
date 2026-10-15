@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | All Corè Essentials</title>
+<meta name="description" content="Reach the All Corè Essentials team in Bangalore, Mumbai, New Delhi or Kolkata. Monday to Friday 10am-7pm, Saturday 10am-6pm.">
+<link rel="canonical" href="https://www.allcoreessentials.com/contact/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Us | All Corè Essentials">
+<meta property="og:description" content="Reach the All Corè Essentials team in Bangalore, Mumbai, New Delhi or Kolkata.">
+<meta property="og:url" content="https://www.allcoreessentials.com/contact/">
+<meta property="og:image" content="https://www.allcoreessentials.com/images/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&family=Playfair+Display:wght@400;500&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"All Corè Essentials","url":"https://www.allcoreessentials.com/","email":"connect@allcoreessentials.com","telephone":"+91 761-9569981"}</script>
+</head>
+<body class="js-off">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="topline"><a class="brand" href="../index.html">All Corè Essentials</a><button class="burger" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">&#9776;</button></div>
+    <p class="subtitle">Business Strategy and Content Solutions</p>
+    <p class="tagline">All Corè Essentials provides strategic and functional empowerment to organisations for effective media and business strategy.<br>Media Procurements and Personal Development Programs for dynamic organisational design and entrepreneurial success.</p>
+    <nav id="nav" aria-label="Main"><a href="../index.html">Home</a><a href="../concept/index.html">Content Conceptualisations</a><a href="../business/index.html">Business Development</a><a href="../pdp/index.html">Personal Development Programs</a><a href="../services/index.html">Corè Services</a><a href="index.html" aria-current="page">Contact Us</a></nav>
+  </div>
+</header>
+<main id="main">
+<section class="cphead rv">
+  <h1>Contact Us</h1>
+  <p>Reach Us Out!</p>
+</section>
+<section class="cpage">
+  <div class="cpimg" style="background-image:url(../images/contact-network.jpg)" role="img" aria-label="Abstract network sculpture"></div>
+  <div class="cpform">
+    <p class="cities2">Mumbai &middot; Bangalore &middot; Delhi &middot; Kolkata</p>
+    <p class="mail">connect@allcoreessentials.com</p>
+    <form id="cf2" method="POST" action="https://formsubmit.co/connect@allcoreessentials.com">
+      <div class="row2">
+        <label>First Name *<input name="first_name" placeholder="Enter your first name" required></label>
+        <label>Last Name *<input name="last_name" placeholder="Enter your last name" required></label>
+      </div>
+      <div class="row2">
+        <label>Company<input name="company" placeholder="Enter your company"></label>
+        <label>Phone<input name="phone" type="tel" placeholder="Enter your phone number"></label>
+      </div>
+      <label>Email *<input type="email" name="email" placeholder="Enter your email" required></label>
+      <label>Message<textarea name="message" id="message-field" rows="4" placeholder="Enter your message"></textarea></label>
+      <input type="hidden" name="service" id="service-field">
+      <input type="hidden" name="_subject" id="subject-field" value="New enquiry from allcoreessentials.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <button class="btn" type="submit">Send</button>
+      <p id="ok2" role="status" hidden>Thanks for submitting!</p>
+    </form>
+    <p class="hours">Monday to Friday: 10:00 am &ndash; 7:00 pm<br>Saturday: 10:00 am &ndash; 6:00 pm</p>
+  </div>
+</section>
+<script>
+(function(){
+  var names={concept:'Corè Content Conceptualisation',pdp:'ACE Personal Development Programs',leadership:'Corè Essentials Leadership'};
+  var p=new URLSearchParams(location.search);
+  var svc=p.get('service');
+  if(svc&&names[svc]){
+    document.getElementById('service-field').value=names[svc];
+    var m=document.getElementById('message-field');
+    m.value='I would like to book: '+names[svc]+'.\n\n';
+  }
+})();
+var f=document.getElementById('cf2');if(f)f.addEventListener('submit',function(e){e.preventDefault();
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){if(r.ok){f.reset();document.getElementById('ok2').hidden=false}else{alert('Sorry, something went wrong. Please email connect@allcoreessentials.com.')}}).catch(function(){alert('Sorry, something went wrong. Please email connect@allcoreessentials.com.')})});
+</script>
+</main>
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="../index.html">All Corè Essentials</a>
+    <p><a href="mailto:connect@allcoreessentials.com">connect@allcoreessentials.com</a>&nbsp;|&nbsp;<a href="tel:+917619569981">+91 761-9569981</a></p>
+    <p>Bangalore | Mumbai | New Delhi | Kolkata</p>
+    <p class="copy">&copy;2026 All Core Essentials. All Rights Reserved.</p>
+  </div>
+</footer>
+<script>
+document.body.className='js-on';
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
