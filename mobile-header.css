@@ -13,9 +13,10 @@
   header.top .wrap p.subtitle{display:block !important;visibility:visible !important;opacity:1 !important;margin:10px 0 0 !important;font-size:3.7vw !important;line-height:1.35 !important;color:#6e6e6e !important}
   /* Paragraph: lighter grey */
   header.top .wrap p.tagline{display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important;max-height:none !important;overflow:visible !important;margin:8px 0 0 !important;font-size:3.2vw !important;line-height:1.55 !important;color:#9a9a9a !important;text-align:left !important;font-style:italic !important}
-  header.top .wrap p.tagline br{content:"" !important}
-  header.top .wrap p.tagline br:after{content:" "}
-  header.top .wrap p.tagline br.dbr{display:none !important}
+  /* On mobile the line break between the two sentences becomes a single space,
+     so "strategy." and "Media" no longer run together */
+  header.top .wrap p.tagline br,
+  header.top .wrap p.tagline br.dbr{display:inline !important;content:" " !important;white-space:pre !important}
   /* Home page hero */
   .hero .wrap{padding-left:12px !important;padding-right:12px !important;box-sizing:border-box;max-width:100%}
   .hero .sub{white-space:nowrap !important;font-size:3.9vw !important;line-height:1.3 !important;letter-spacing:0 !important;max-width:100%}
