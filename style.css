@@ -1,4 +1,3 @@
-@import url("mobile-header.css");
 *{box-sizing:border-box}
 :root{--ink:#2b2b2b;--soft:#444;--grey:#bdbdbd;--black:#000;--panel:#1a1a1a}
 html{scroll-behavior:smooth}
@@ -98,3 +97,8 @@ footer a{color:inherit;text-decoration:none}footer a:hover{text-decoration:under
 .js-on .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
 .js-on .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js-on .rv{opacity:1;transform:none;transition:none}}
+/* mobile-only header fixes (<=768px) - laptop untouched */
+@media (max-width:768px){
+  html body header.top .wrap p.subtitle{color:#4a4a4a !important}
+  html body header.top .wrap p.tagline br,html body header.top .wrap p.tagline br.dbr{display:none !important}
+}
