@@ -1,3 +1,4 @@
+@import url("mobile-header.css");
 *{box-sizing:border-box}
 :root{--ink:#2b2b2b;--soft:#444;--grey:#bdbdbd;--black:#000;--panel:#1a1a1a}
 html{scroll-behavior:smooth}
